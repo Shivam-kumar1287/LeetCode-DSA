@@ -28,5 +28,7 @@ public class q136 {
         }
         System.out.println(single(arr));
        sc.close();
+
+       
     }
 }
