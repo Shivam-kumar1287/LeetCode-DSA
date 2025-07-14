@@ -1,3 +1,4 @@
+package Array.Easy;
 import java.util.*;
 
 public class q744 {
