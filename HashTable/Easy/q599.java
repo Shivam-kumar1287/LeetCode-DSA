@@ -7,22 +7,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 class q599 {
-
-    // static Set<String> findRestaurantString[] l1, String[] l2) {
-
-    //     Set<String> set1 = new HashSet<>();
-    //     Set<String> set2 = new HashSet<>();
-    //     for (String item : l1) {
-    //         set1.add(item);
-    //     }
-    //     for (String item : l2) {
-    //         if (set1.contains(item)) {
-    //             set2.add(item);         }
-    //     }
-
-    //     return set2; 
-    
-    // }
+  
 
  public String[] findRestaurant(String[] list1, String[] list2) {
         Map<String, Integer> map1 = new HashMap<>();
