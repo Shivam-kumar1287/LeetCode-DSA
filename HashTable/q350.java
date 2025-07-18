@@ -32,7 +32,7 @@ return result.stream().mapToInt(i -> i).toArray();
 
         System.out.println("Enter size of 2nd array:");
         int m = sc.nextInt();
-        int[] ar = new int[m];
+        int[] ar = new int[m] ;
 
         System.out.println("Enter elements of 2nd array:");
         for (int i = 0; i < m; i++) {        
