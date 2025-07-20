@@ -39,7 +39,7 @@ return result.stream().mapToInt(i -> i).toArray();
             ar[i] = sc.nextInt();   }
 
         int[] result = intersect(arr, ar); 
-              System.out.println("Intersection: " + Arrays.toString(result));
+                System.out.println("Intersection: " + Arrays.toString(result));
 
         sc.close(); 
     }
