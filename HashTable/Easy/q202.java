@@ -11,7 +11,7 @@ public class q202 {
                sum+=temp*temp;
                n/=10;
             } 
-            return isHappy(sum) ;
+            return isHappy(sum)    ;
         }
     }
 }
