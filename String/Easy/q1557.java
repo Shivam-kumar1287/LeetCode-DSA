@@ -1,3 +1,5 @@
+
+//problem of the day
 public class q1557 {
     public String makeFancyString(String s) {
                StringBuilder sb = new StringBuilder();
