@@ -1,7 +1,7 @@
 package Array.Easy.Easy;
 
 public class q121 {
-    public int maxProfit(int[] prices) {
+    public int maxProfit(int[]  prices) {
         int maxp = 0;
         int minp = Integer.MAX_VALUE;
 
