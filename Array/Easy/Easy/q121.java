@@ -6,7 +6,7 @@ public class q121 {
         int minp = Integer.MAX_VALUE;
 
         for (int p : prices) {
-            minp = Math.min(minp, p);
+            minp = Math.min(minp,  p);
             maxp = Math.max(maxp, p - minp);
         }
         return maxp;
