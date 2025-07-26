@@ -1,12 +1,12 @@
 package Array.Easy.Easy;
 
 public class q121 {
-    public int maxProfit(int[] prices) {
+    public int maxProfit(int[]  prices) {
         int maxp = 0;
         int minp = Integer.MAX_VALUE;
 
         for (int p : prices) {
-            minp = Math.min(minp, p);
+            minp = Math.min(minp,  p);
             maxp = Math.max(maxp, p - minp);
         }
         return maxp;
