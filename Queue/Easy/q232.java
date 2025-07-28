@@ -1,3 +1,4 @@
+package Easy;
 import java.util.Stack;
 public class q232 {
 
