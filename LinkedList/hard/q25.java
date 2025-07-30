@@ -1,6 +1,15 @@
-package LinkedList.hard;
+import java.util.*;
 
-public class q25 {public ListNode reverseKGroup(ListNode head, int k) {
+public class q25 {
+
+      public class ListNode {
+   int val;
+      ListNode next;
+      ListNode() {}
+      ListNode(int val) { this.val = val; }
+      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+  }
+    public ListNode reverseKGroup(ListNode head, int k) {
         int count = 0;
         ListNode t = head;
         while (t != null) {
@@ -40,5 +49,8 @@ public class q25 {public ListNode reverseKGroup(ListNode head, int k) {
         }
 
         return dummy.next;
+    }
+    public static void main(String[] args) {
+        
     }
 }
