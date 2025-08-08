@@ -1,26 +1,30 @@
+class Solution {
+    public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> list=new ArrayList<>();
+          int slen=s.length();
+            int plen=p.length();
+        for( int i=0;i<=slen-plen;i++  ){
+            String ab=s.substring(i,i+plen);
+            if(check(ab,p)){
+                list.add(i);
+            }
+        }
+        return list;
+    }
+    private boolean check(String ab,String p){
+       if(ab.length()!=p.length()) {
+          return false;}
 
-class Solution(object):
-    def findAnagrams(self, s, p):
-
-
-        result = []
-        s_len = len(s)
-        p_len = len(p)
-
-        for i in range(s_len - p_len + 1):
-            sub = s[i:i + p_len]
-            if self.is_anagram(sub, p):
-                result.append(i)
-
-        return result
-
-    def is_anagram(self, a: str, b: str) -> bool:
-        if len(a) != len(b):
-            return False
-
-        freq = [0] * 26
-        for i in range(len(a)):
-            freq[ord(a[i]) - ord('a')] += 1
-            freq[ord(b[i]) - ord('a')] -= 1
-
-        return all(count == 0 for count in freq)
+    int[] freq = new int[26];
+        for(int i=0;i<ab.length();i++){
+            freq[ab.charAt(i)-'a']++;
+            freq[p.charAt(i)-'a']--;
+        }
+        for(int num:freq){
+            if(num!=0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
