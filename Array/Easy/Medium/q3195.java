@@ -11,7 +11,7 @@ class q3195 {
             if(grid[i][j]==1){
              minrow= Math.min(minrow,i);
              mincol= Math.min(mincol,j);
-             maxrow= Math.max(maxrow,i);
+               maxrow= Math.max(maxrow,i);
              maxcol= Math.max(maxcol,j);
             }
            }
