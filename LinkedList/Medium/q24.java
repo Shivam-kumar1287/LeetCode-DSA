@@ -25,7 +25,7 @@ public class q24 {
             prev.next = second;
             
             // Move prev to the next pair
-            prev = first;
+              prev = first;
         }
         
         return dummy.next;
