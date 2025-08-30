@@ -10,7 +10,7 @@ class Solution {
             ce = n / 2;
             co = n / 2;
             }
-        else{
+         else{
             ce = n / 2;
             co = n / 2 + 1;
         }
