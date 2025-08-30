@@ -1,8 +1,7 @@
-import java.util.HashSet;
-
+package leetcode.matrix.Easy;
 class q2133 {
     public boolean checkValid(int[][] matrix) {
-        int n = matrix.length;   
+         int n = matrix.length;   
              int m = matrix[0].length;
 
         HashSet<Integer> set = new HashSet<>();
