@@ -1,6 +1,6 @@
 package leetcode.matrix.Easy;
 class q2133 {
-    public boolean checkValid(int[][] matrix) {
+      public boolean checkValid(int[][] matrix) {
          int n = matrix.length;   
              int m = matrix[0].length;
 
