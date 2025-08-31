@@ -1,7 +1,7 @@
 import java.util.HashSet;
 
 class q36 {
-    public boolean isValidSudoku(char[][] board) {
+        public boolean isValidSudoku(char[][] board) {
         int n = 9;
 
         for (int i = 0; i < n; i++) {
