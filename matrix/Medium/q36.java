@@ -9,7 +9,7 @@ class q36 {
             for (int j = 0; j < n; j++) {
                 char c = board[i][j];
                 if (c != '.') {
-                    if (rowSet.contains(c)) return false;
+                     if (rowSet.contains(c)) return false;
                     rowSet.add(c);
                 }
             }
