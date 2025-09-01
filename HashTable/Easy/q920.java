@@ -5,8 +5,8 @@ class q920 {
 
         Map<Character, String> map = new HashMap<>();
 
-        for (int i = 0; i < pattern.length(); i++) {
-            char c = pattern.charAt(i);
+          for (int i = 0; i < pattern.length(); i++) {
+                   char c = pattern.charAt(i);
             String w = words[i];
 
             if (map.containsKey(c)) {
