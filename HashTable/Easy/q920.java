@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 class q920 {
     public boolean wordPattern(String pattern, String s) {
         String[] words = s.split(" ");
