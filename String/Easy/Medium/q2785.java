@@ -7,8 +7,8 @@ class q2785 {
         );
 
         List<Character> extracted = new ArrayList<>();
-        for (char c : s.toCharArray()) {
-            if (vowels.contains(c)) {
+           for (char c : s.toCharArray()) {
+               if (vowels.contains(c)) {
                 extracted.add(c);
             }
         }
