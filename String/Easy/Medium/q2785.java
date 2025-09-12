@@ -3,7 +3,7 @@ import java.util.*;
 class q2785 {
     public String sortVowels(String s) {
         Set<Character> vowels = new HashSet<>(
-            Arrays.asList('a','e','i','o','u','A','E','I','O','U')
+              Arrays.asList('a','e','i','o','u','A','E','I','O','U')
         );
 
         List<Character> extracted = new ArrayList<>();
