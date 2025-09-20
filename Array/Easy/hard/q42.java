@@ -11,7 +11,7 @@ class q42 {
         
         int[] r = new int[n];
         r[n-1] = height[n-1];
-        for(int i = n-2; i >= 0; i--) {
+            for(int i = n-2; i >= 0; i--) {
             r[i] = Math.max(height[i], r[i+1]);
         }
         
