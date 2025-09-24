@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class q166 {
     public String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) { 
                return "0";
@@ -31,8 +31,7 @@ class Solution {
             remainder *= 10;
             sb.append(remainder / de);
               remainder %= de; 
-             }
-        
+             }  
         return sb.toString();
     }
 }
