@@ -30,7 +30,7 @@ class Solution {
             
             remainder *= 10;
             sb.append(remainder / de);
-            remainder %= de; 
+              remainder %= de; 
              }
         
         return sb.toString();
