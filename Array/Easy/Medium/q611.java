@@ -12,8 +12,8 @@ class Solution {
             
             while (left < right) {
                 if (nums[left] + nums[right] > nums[i]) {
-                       count += (right - left);
-                    right--;
+                  count += (right - left);
+                  right--;
                 } else {
                     left++;
                 }
