@@ -4,7 +4,7 @@ class 3100:
         result=numBottles
         while numwb>=numExchange:
             numwb=numwb-numExchange
-            result+=1
+              result+=1
             numwb+=1
             numExchange+=1
         return result
