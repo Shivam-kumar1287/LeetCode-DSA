@@ -5,7 +5,7 @@ class 3100:
         while numwb>=numExchange:
             numwb=numwb-numExchange
               result+=1
-            numwb+=1
+              numwb+=1
             numExchange+=1
         return result
         
