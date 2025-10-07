@@ -10,7 +10,7 @@ class q84 {
             int r=i;
           int l=stack.isEmpty() ? -1:stack.peek();
             int w=r-l-1;
-            maxarea=Math.max(maxarea,h*w);
+              maxarea=Math.max(maxarea,h*w);
         }
         stack.push(i);
        }
