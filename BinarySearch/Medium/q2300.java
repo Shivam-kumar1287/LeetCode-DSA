@@ -1,4 +1,4 @@
-class Solution {
+class q2300 {
     public int[] successfulPairs(int[] spells, int[] potions, long success) {
         int[] arr=new int[spells.length];
         Arrays.sort(potions);
