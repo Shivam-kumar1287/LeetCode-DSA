@@ -8,5 +8,6 @@ class q3147 {
             sum+=energy[j-i];
             max=Math.max(max,sum);
         }       }
-       return max;
-    
+    return max;
+    }
+}
