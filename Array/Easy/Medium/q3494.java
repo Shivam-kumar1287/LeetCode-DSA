@@ -14,7 +14,7 @@ class q3494 {
                 long left = (j > 0) ? prefix[j - 1] : 0;
                 long cur=(mana[i-1]*prefix[j])-(mana[i]*left);
                 if(cur>maxdiff){
-                      maxdiff=cur;
+                    maxdiff=cur;
                 }
             }
             starttime+=maxdiff;
