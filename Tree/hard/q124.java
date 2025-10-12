@@ -15,7 +15,7 @@
  */
 class q124 {
     int sum=Integer.MIN_VALUE;
-    public int maxPathSum(TreeNode root) {
+     public int maxPathSum(TreeNode root) {
     helper(root);
     return sum;
     }
