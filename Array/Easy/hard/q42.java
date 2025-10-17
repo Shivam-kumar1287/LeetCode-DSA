@@ -6,7 +6,7 @@ class q42 {
         int[] l = new int[n];
         l[0] = height[0];  
         for(int i = 1; i < n; i++) {
-            l[i] = Math.max(height[i], l[i-1]);
+               l[i] = Math.max(height[i], l[i-1]);
         }
         
         int[] r = new int[n];
