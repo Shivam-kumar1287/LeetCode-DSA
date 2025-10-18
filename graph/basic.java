@@ -13,7 +13,6 @@ import java.util.Queue;
  *   | \     |
  * |  \2   |3
  * 5 ----- 4
- *   
  */
 
 public class Basic {
@@ -63,6 +62,10 @@ public class Basic {
         boolean[] vis = new boolean[V];
         dfs(graph, 0, vis);
         System.out.println();
+
+        // Check path existence
+        boolean[] visited = new boolean[V];
+        System.out.println("\nPath exists between 0 and 4: " + haspath(graph, 0, 4, visited));
     }
 
     // Method to add undirected edge
@@ -75,8 +78,7 @@ public class Basic {
     public static void dfs(ArrayList<Edge>[] graph, int curr, boolean[] vis) {
         System.out.print(curr + " ");
         vis[curr] = true;
-        for (int i = 0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
+        for (Edge e : graph[curr]) {
             if (!vis[e.dest]) {
                 dfs(graph, e.dest, vis);
             }
@@ -94,13 +96,29 @@ public class Basic {
             if (!visited[curr]) {
                 System.out.print(curr + " ");
                 visited[curr] = true;
-                for (int i = 0; i < graph[curr].size(); i++) {
-                    Edge e = graph[curr].get(i);
+                for (Edge e : graph[curr]) {
                     q.add(e.dest);
                 }
             }
         }
         System.out.println();
     }
-    
+
+    // Path existence check using DFS
+    public static boolean haspath(ArrayList<Edge>[] graph, int src, int dest, boolean[] vis) {
+        if (src == dest) {
+            return true;
+        }
+
+        vis[src] = true;
+
+        for (Edge e : graph[src]) {
+            if (!vis[e.dest]) {
+                if (haspath(graph, e.dest, dest, vis)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
