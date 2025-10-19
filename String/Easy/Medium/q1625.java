@@ -16,7 +16,7 @@ class q1625 {
             vis.add(added);
             queue.offer(added);
           }
-        String  rotated=rotate(cur,b);
+           String  rotated=rotate(cur,b);
         if(!vis.contains(rotated)){
             vis.add(rotated);
             queue.offer(rotated);
