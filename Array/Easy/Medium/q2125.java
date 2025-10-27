@@ -11,7 +11,7 @@ class q2125 {
             }
             if(cur>0){
                 t+=prev*cur;
-                prev=cur;
+                  prev=cur;
             }
        }
    return t;
