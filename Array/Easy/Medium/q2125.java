@@ -6,7 +6,7 @@ class q2125 {
             int cur=0;
             for(char c:s.toCharArray()){
                   if(c=='1'){
-                    cur+=1;
+                 cur+=1;
                 }
             }
             if(cur>0){
