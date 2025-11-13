@@ -12,7 +12,7 @@ public class q744 {
             } else {
                 s = mid + 1;
             }
-        }
+                 }
         
         return str[s % str.length];
     }
