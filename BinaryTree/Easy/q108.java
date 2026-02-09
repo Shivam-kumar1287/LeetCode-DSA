@@ -1,5 +1,18 @@
 package BinaryTree.Easy;
-
+import BinaryTree.MEdium.TreeNode;
+import java.util.ArrayList;
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {}
+    TreeNode(int val) { this.val = val; }
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+     }
+}
 public class q108 {
     public TreeNode sortedArrayToBST(int[] nums) {
            return helper(nums,0,nums.length-1);
