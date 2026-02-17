@@ -3,7 +3,7 @@ public class pratice {
         int[] arr={1,2,3,4,5,6,7,8,9};
         int target=5;
         int result=binarySearch(arr,target);
-           System.out.println("Element found at index: " + result);
+        System.out.println("Element found at index: " + result);
     }
     public static int binarySearch(int[] arr,int target){
         int l=0;
