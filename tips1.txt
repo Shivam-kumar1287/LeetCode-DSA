@@ -1,0 +1,31 @@
+integer to binary 
+
+
+IN SHORT
+in Python 
+ s = bin(n)[2:]  
+
+IN  java 
+String s = Integer.toBinaryString(n);
+
+Normal Way
+ public String binaryMaker(int n){
+
+     if (n == 0) {
+             return "";
+        }
+        return makebinary(n / 2) + (n % 2);
+    
+}
+
+
+
+Compare ter 
+how to sort array without use array.sort and without create a   for  Loop 
+
+this is compare a+b and b+a .
+  Arrays.sort(s,(a, b)->(b + a).compareTo(a + b));
+
+this is compare a and b
+ Arrays.sort(s,(a,b)->(a).compareTo(b)); 
+ 
