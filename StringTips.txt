@@ -1,0 +1,34 @@
+🔥 Convert String to Char Array (Very Useful)
+char[] arr = s.toCharArray();
+
+
+Reverse String (Java)
+String reversed = new StringBuilder(s).reverse().toString();
+
+int Python
+s[::-1]
+
+
+🔹 3. Frequency Array Trick (Very Fast)
+Java
+int[] freq = new int[26];
+freq[s.charAt(i) - 'a']++;
+
+Python
+freq = [0]*26
+freq[ord(s[i]) - ord('a')] += 1
+
+
+🔹 4 .Method 2: Using Regex (Shorter Way)
+String result = s.replaceAll("[^a-zA-Z]", "");
+ 
+ In Python 
+ def keep_only_letters(s):
+    return "".join(ch for ch in s if ch.isalpha())
+
+
+🔹 3.
+
+
+
+🔹 3.
