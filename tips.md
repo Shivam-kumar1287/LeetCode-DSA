@@ -94,13 +94,17 @@ StringBuilder
 
 
 Collection 
+
 how store array in list
 Collection<Integer> list = Arrays.asList(nums);
+
 how to convert list to array
 int[] arr = list.stream().mapToInt(i -> i).toArray();
+
 how to reverse a list
 List<Integer> list = Arrays.asList(nums);
 Collections.reverse(list);
+
 how to convert list to array
 int[] arr = list.stream().mapToInt(i -> i).toArray();
 
