@@ -20,6 +20,13 @@ Normal Way
 
 
 
+Binary to Integer
+
+in java
+
+
+
+
 Compare ter 
 how to sort array without use array.sort and without create a   for  Loop 
 
