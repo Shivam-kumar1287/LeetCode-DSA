@@ -21,9 +21,16 @@ Normal Way
 
 
 Binary to Integer
+in Python
+convert a binary string to an integer.
+string = "101"
+num = int(string, 2)
+print(num)
+
 
 in java
-
+ String str = sb.toString();
+int ans = Integer.parseInt(str, 2);
 
 
 

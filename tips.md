@@ -14,8 +14,13 @@ tips
     }
 
 
+
 // Convert to long to avoid overflow
    long num = Math.abs((long) numerator);
+
+//you can convert an int to String in several simple ways.
+   String str = String.valueOf(num);
+
 
 how to convert string to integer
 like return Integer.parseInt(value);
