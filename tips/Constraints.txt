@@ -1,0 +1,23 @@
+🧠 1. Golden Rule (MOST IMPORTANT)
+
+👉 Always check input size (n) in constraints.
+
+n (size)	Allowed TC
+n ≤ 10	    O(n!) / O(2ⁿ)
+n ≤ 20	    O(2ⁿ)
+n ≤ 100	    O(n³)
+n ≤ 10³	    O(n²)
+n ≤ 10⁵	    O(n log n)
+n ≤ 10⁶+	O(n)
+
+
+
+🚀 4. Pattern → TC Mapping (VERY IMPORTANT)
+Pattern	                TC
+Two                 loops	O(n²)
+Three               loops	O(n³)
+Sliding window	    O(n)
+Two pointers	    O(n)
+Binary search	    O(log n)
+Heap            	O(n log n)
+Graph BFS/DFS	    O(V + E)
