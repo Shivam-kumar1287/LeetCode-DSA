@@ -1,0 +1,4 @@
+🧠 Final Memory Trick
+Rotation	                     Formula
+Clockwise(LeetCode)	        (i,j) → (j, n-i-1)
+Anti-clockwise (GFG)	    (i,j) → (n-j-1, i)
