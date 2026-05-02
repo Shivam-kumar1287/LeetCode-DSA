@@ -1,5 +1,4 @@
 import java.util.HashMap;
-
 class q3761 {
     private int reverse(int x) {
         int rev = 0;
