@@ -25,7 +25,7 @@ class Solution {
     public static boolean isGood(int n) {
         int original = n;
         boolean val = false;
-
+   //nm mnf 
         while (n > 0) {
             int d = n % 10;
 
