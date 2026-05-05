@@ -2,6 +2,7 @@ public class q896 {
     public boolean isMonotonic(int[] nums) {
        boolean ii=true;
        boolean dd=true;
+        
        for(int i=1;i<nums.length;i++) {
         if(nums[i]>nums[i-1]){
             ii=false;
