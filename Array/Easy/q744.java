@@ -1,6 +1,7 @@
 package Array.Easy;
 import java.util.*;
 import java.util.Scanner;
+
 public class q744 {
     static char find(char[] str, char target) {
         int s = 0, h = str.length - 1;
