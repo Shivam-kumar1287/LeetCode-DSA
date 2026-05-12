@@ -1,3 +1,4 @@
+import java.util.Arrays;
 class q1665 {
     public int minimumEffort(int[][] tasks) {
         int l=0;
