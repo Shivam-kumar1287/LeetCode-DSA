@@ -1,0 +1,10 @@
+Arrrays
+An array is a collection of elements stored in contiguous memory locations.
+
+🔹 6. Time Complexity
+Operation	Time Complexity
+Access	O(1)
+Search	O(n)
+Insert (end)	O(1)
+Insert (middle)	O(n)
+Delete	O(n)
