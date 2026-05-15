@@ -6,6 +6,7 @@ public class q153 {
         while(l<=r){
             ans=Math.min(ans,Math.min(nums[l],nums[r]));
             l+=1;
+              
             r-=1;}
         return ans;
     }
