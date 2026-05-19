@@ -7,7 +7,7 @@ public class q232 {
         private Stack<Integer> stack2;
         public myQueue(){
             stack1=new Stack<>();
-            stack2=new Stack<>();
+               stack2=new Stack<>();
         }
         public int push(int x)
         {
