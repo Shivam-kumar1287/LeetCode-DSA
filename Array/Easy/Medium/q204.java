@@ -1,3 +1,4 @@
+import java.util.Arrays;
 class q204 {
     public int countPrimes(int n) {
         int c = 0;
@@ -7,7 +8,7 @@ class q204 {
         if(n<=2)return 0;
         prime[0]=false;
         prime[1]=false;
-        
+
         for (int i=2;i*i<n;i++){
             if(prime[i]){
                 for(int j=i*i;j<n;j+=i){
