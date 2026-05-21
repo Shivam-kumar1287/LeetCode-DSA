@@ -1,0 +1,115 @@
+
+| Feature         | DFS (Depth First Search)      | BFS (Breadth First Search) |
+| --------------- | ----------------------------- | -------------------------- |
+| Traversal Style | Go deep first                 | Go level by level          |
+| Data Structure  | Stack / Recursion             | Queue                      |
+| Memory          | Usually less                  | Usually more               |
+| Used In         | Tree recursion, path problems | Level order traversal      |
+| Order Example   | Root → Left → Right           | Level by level             |
+
+
+What is DFS?
+DFS (Depth First Search) is a graph/tree traversal algorithm.
+
+It explores:
+first one path deeply
+then backtracks
+then explores another path
+
+Think like:
+“Go as deep as possible before coming back.”
+
+
+code    dfs
+class Solution {
+
+    public void dfs(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        System.out.print(root.val + " ");
+
+        dfs(root.left);
+        dfs(root.right);
+    }
+}
+
+
+
+bfs 
+import java.util.*;
+
+class Solution {
+
+    public void bfs(TreeNode root) {
+
+        if (root == null) {
+            return;
+        }
+
+        Queue<TreeNode> q = new LinkedList<>();
+
+        q.offer(root);
+
+        while (!q.isEmpty()) {
+
+            TreeNode curr = q.poll();
+
+            System.out.print(curr.val + " ");
+
+            if (curr.left != null) {
+                q.offer(curr.left);
+            }
+
+            if (curr.right != null) {
+                q.offer(curr.right);
+            }
+        }
+    }
+}
+
+
+
+
+
+DFS Implementation in Your Question (Good Nodes)
+
+Your solution uses DFS because:
+
+It goes deeply into left subtree
+Then deeply into right subtree
+Uses recursion
+
+
+When to Use
+Use DFS When:
+Path problems
+Tree recursion
+Backtracking
+Height/depth problems
+Trees
+Graphs
+Backtracking
+Maze problems
+Cycle detection
+Topological sort
+Connected components
+Path finding
+Sudoku solving
+N-Queens
+Islands problem
+Your "Good Nodes" problem
+
+
+Use BFS When:
+Level order traversal
+Shortest path in unweighted graph
+Minimum depth
+Nearest node problems
+
+
+| Traversal | Time   | Space  |
+| --------- | ------ | ------ |
+| DFS       | `O(N)` | `O(H)` |
+| BFS       | `O(N)` | `O(W)` |
