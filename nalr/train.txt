@@ -1,0 +1,55 @@
+# Train Problems – Important Formulas 🚆
+
+| Topic | Formula |
+| :--- | :--- |
+| **Train crossing a pole/man** | Time = Length of Train ÷ Speed |
+| **Train crossing platform** | Time = (Length of Train + Length of Platform) ÷ Speed |
+| **Two trains crossing opposite direction** | Time = Sum of Lengths ÷ Sum of Speeds |
+| **Two trains crossing same direction** | Time = Sum of Lengths ÷ Difference of Speeds |
+| **Length of Train** | Length = Speed × Time |
+| **Speed of Train** | Speed = Distance ÷ Time |
+| **Relative speed (same direction)** | Faster Speed − Slower Speed |
+| **Relative speed (opposite direction)** | Sum of both speeds |
+| **Convert km/hr → m/s** | Multiply by 5/18 |
+| **Convert m/s → km/hr** | Multiply by 18/5 |
+
+---
+
+## Most Important Train Formulas
+
+**1. Train Crossing Pole**
+> Time = (Length of Train) / Speed
+
+**2. Train Crossing Platform**
+> Time = (Train Length + Platform Length) / Speed
+
+**3. Two Trains Opposite Direction**
+> Time = (L₁ + L₂) / (S₁ + S₂)
+
+**4. Two Trains Same Direction**
+> Time = (L₁ + L₂) / (S₁ - S₂)
+
+---
+
+## Short Tricks ⚡
+
+| Situation | Trick |
+| :--- | :--- |
+| **Pole/Man** | Only train length matters |
+| **Platform** | Add platform length |
+| **Opposite Direction** | Add speeds |
+| **Same Direction** | Subtract speeds |
+| **Find speed quickly** | Convert km/hr → m/s first |
+
+---
+
+## Conversion Shortcuts
+
+| km/hr | m/s |
+| :--- | :--- |
+| 18 km/hr | 5 m/s |
+| 36 km/hr | 10 m/s |
+| 54 km/hr | 15 m/s |
+| 72 km/hr | 20 m/s |
+| 90 km/hr | 25 m/s |
+| 108 km/hr | 30 m/s |
