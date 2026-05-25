@@ -1,0 +1,29 @@
+# Time, Speed & Distance
+
+| Concept                             | Formula                                                                         |
+| ----------------------------------- | ------------------------------------------------------------------------------- |
+| Speed                               | Speed = Distance ÷ Time                                                         |
+| Distance                            | Distance = Speed × Time                                                         |
+| Time                                | Time = Distance ÷ Speed                                                         |
+| Average Speed                       | Average Speed = Total Distance ÷ Total Time                                     |
+| Convert km/hr to m/s                | Multiply by (5/18)                                                              |
+| Convert m/s to km/hr                | Multiply by (18/5)                                                              |
+| Time taken to cross a pole/object   | Length of train ÷ Speed of train                                                |
+| Time taken to cross platform        | (Length of train + Length of platform) ÷ Speed                                  |
+| Speed after changing time           | New Speed = (Old Speed × Old Time) / New Time                                   |
+| If speed increases by x%            | Time decreases by (x / (100+x)) × 100%                                          |
+| If speed decreases by x%            | Time increases by (x / (100-x)) × 100%                                          |
+| Boats & Streams – Downstream Speed  | Boat Speed + Stream Speed                                                       |
+| Boats & Streams – Upstream Speed    | Boat Speed − Stream Speed                                                       |
+| Boat Speed in Still Water           | (Downstream Speed + Upstream Speed) / 2                                         |
+| Stream Speed                        | (Downstream Speed − Upstream Speed) / 2                                         |
+
+- **Average Speed**: 2ab / (a + b) (when distances are equal)
+- **Distance**: (S₁ × S₂) / |S₁ - S₂| × Time Difference
+- **Length of Train**: Speed × Time
+
+### Relative Speed
+| Movement Direction | Visual Concept | Mathematical Formula |
+| ------------------ | -------------- | -------------------- |
+| Same Direction     | ⟶ and ⟶ Overtaking / Catching up | Relative Speed = V₁ - V₂ (if V₁ > V₂) |
+| Opposite Direction | ⟶ and ⟵ Approaching / Moving apart | Relative Speed = V₁ + V₂ |

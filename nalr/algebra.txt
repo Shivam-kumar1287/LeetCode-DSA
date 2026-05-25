@@ -1,0 +1,13 @@
+# Algebra Tricks
+
+- **Squares & Higher Powers**: 
+  - If x + 1/x = n, then:
+  - x² + 1/x² = n² - 2
+  - x³ + 1/x³ = n³ - 3n
+- **Power trick**: x^631 + 1/x^631 = 11 then find value of x^631 - 1/x^631 = √(11² - 4) = √(121 - 4) = √117
+- **Expression**: a² + b² + c² - ab - bc - ca
+  - Trick: Result = 3 × d² (where d is the common difference)
+- **Expression**: a³ + b³ + c³ - 3abc
+  - If given AP terms like a=64, b=66, c=68
+  - Trick: 9 × d² × m (where d = difference, m = middle value)
+  - Example: 9 × 2² × 66

@@ -1,0 +1,18 @@
+# Logarithms
+
+| Formula Name       | Formula                                            | Shortcut Idea             |
+| ------------------ | -------------------------------------------------- | ------------------------- |
+| Definition         | log_a(b) = x ⟺ a^x = b                              | Convert log to exponent   |
+| Product Rule       | log_a(xy) = log_a(x) + log_a(y)                    | Multiplication → Addition |
+| Division Rule      | log_a(x/y) = log_a(x) - log_a(y)                   | Division → Subtraction    |
+| Power Rule         | log_a(x^n) = n·log_a(x)                            | Power comes front         |
+| Root Rule          | log_a(ⁿ√x) = (1/n)·log_a(x)                        | Root → Fraction           |
+| Change of Base     | log_a(b) = log_c(b) / log_c(a)                     | Change base easily        |
+| Reciprocal Rule    | log_a(b) = 1 / log_b(a)                            | Reverse base/value        |
+| Log of 1           | log_a(1) = 0                                       | Any base power 0 = 1      |
+| Log of Same Number | log_a(a) = 1                                       | Same base/value           |
+| Exponential Cancel | log_a(a^x) = x                                     | Log & base cancel         |
+| Reverse Cancel     | a^(log_a(x)) = x                                   | Power & log cancel        |
+| Equality Rule      | If log_a(x) = log_a(y), then x = y                 | Bases same ⇒ values same  |
+| Common Log         | log_10(x) or log(x)                                | Base 10                   |
+| Natural Log        | ln(e) = 1                                          | Base e                    |

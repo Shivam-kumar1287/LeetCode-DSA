@@ -1,0 +1,37 @@
+# Geometry & Mensuration
+
+## 3D Shapes
+| Shape              | Volume (V)        | Total Surface Area (TSA) | Diagonal        | LSA / CSA / Extra                   |
+| ------------------ | ----------------- | ------------------------ | --------------- | ----------------------------------- |
+| **Cube**           | a³                | 6a²                      | √3 a            | LSA = 4a²                           |
+| **Cuboid**         | lbh               | 2(lb + bh + hl)          | √(l² + b² + h²) | LSA = 2h(l + b)                     |
+| **Cylinder**       | πr²h              | 2πr(h + r)               | ❌               | CSA = 2πrh                          |
+| **Cone**           | ⅓ πr²h            | πr(l + r)                | ❌               | l = √(r² + h²), CSA = πrl           |
+| **Sphere**         | 4/3 πr³           | 4πr²                     | ❌               | —                                   |
+| **Hemisphere**     | 2/3 πr³           | 3πr²                     | ❌               | CSA = 2πr²                          |
+| **Frustum (Cone)** | ⅓πh(R² + r² + Rr) | π(R² + r² + l(R + r))    | ❌               | l = √((R−r)² + h²), CSA = πl(R + r) |
+| **Pyramid**        | ⅓Bh               | LSA + Base Area          | ❌               | LSA = ½ × Perimeter × l             |
+
+## 2D Shapes & Extra Concepts
+- **Weight** = Volume × density
+- **Radius of inscribed sphere in a cone**: r = Rh / (l + R)
+- **Circumference of cylinder base**: 2πr
+- **Diagonal of square**: d = s√2
+- **Rectangle diagonal**: d = √(l² + b²)
+- **Perimeter of rectangle**: P = 2(l + b)
+
+## Triangles
+| Type / Case                     | Area Formula                      | Extra / Condition       |
+| ------------------------------- | --------------------------------- | ----------------------- |
+| **Basic Triangle**              | ½ × base × height                 | Height ⟂ base           |
+| **Right Triangle**              | ½ × base × height                 | Base ⟂ height           |
+| **Equilateral Triangle**        | √3/4 × a²                         | All sides equal         |
+| **Isosceles Triangle**          | ½ × b × h                         | Height bisects base     |
+| **Heron’s Formula**             | √[s(s−a)(s−b)(s−c)]               | s = (a+b+c)/2           |
+| **Using Trigonometry**          | ½ ab sinC                         | Angle between a & b     |
+| **Using Coordinates**           | ½ \|x₁(y₂−y₃)+x₂(y₃−y₁)+x₃(y₁−y₂)\| | For coordinate geometry |
+| **Area using inradius (r)**     | A = r × s                         | s = semi-perimeter      |
+| **Area using circumradius (R)** | A = abc / (4R)                    | a, b, c = sides         |
+
+- **Semi-perimeter**: s = (a + b + c) / 2
+- **Height of equilateral triangle**: h = √3/2 a
