@@ -1,0 +1,26 @@
+# DP (Dynamic Programming) Tips & Notes
+*   **Basics:** Overlapping subproblems & optimal substructure.
+
+### Theoretical & Coding Tips
+*   **Tip:** Always start by identifying the "State" (what variables change) and the "Transitions" (how you move from one state to the next).
+*   **Tip:** Top-Down (Memoization) Code Pattern:
+    ```java
+    Integer[][] memo = new Integer[n][m];
+    public int dp(int i, int j) {
+        if (base_case) return 0;
+        if (memo[i][j] != null) return memo[i][j];
+        // calculate result
+        return memo[i][j] = result;
+    }
+    ```
+*   **Tip:** Bottom-Up (Tabulation) avoids recursion stack overflow.
+    *   *Code:* `int[] dp = new int[n + 1]; dp[0] = base_case; for(int i=1; i<=n; i++) dp[i] = ...`
+*   **Tip:** Space Optimization: If `dp[i]` only depends on `dp[i-1]` and `dp[i-2]`, you don't need an array of size N. Just use two variables.
+
+### Time & Space Complexity
+*   **General Time Complexity Rule:** O(Number of States) * O(Time taken to compute each state).
+    *   *Example (1D array, loop inside):* O(N) states * O(N) transitions = O(N^2) Time.
+    *   *Example (2D array, O(1) transitions):* O(N*M) states * O(1) transitions = O(N*M) Time.
+*   **Top-Down Space Complexity:** O(Number of States) for the Memo table + O(Depth of Recursion) for the call stack.
+*   **Bottom-Up Space Complexity:** O(Number of States) for the DP table.
+*   **Optimized Bottom-Up Space:** Often reducible (e.g., O(N) to O(1) for Fibonacci, or O(N*M) to O(M) for Knapsack if we only need the previous row).

@@ -1,0 +1,27 @@
+# Stack Tips & Notes
+*   **Basics:** LIFO (Last In First Out).
+
+### Theoretical & Coding Tips
+*   **Java Specifics:** Don't use the legacy `Stack` class because it is synchronized (slow). Use `ArrayDeque`.
+    *   *Code:* `Deque<Integer> stack = new ArrayDeque<>(); stack.push(x); int top = stack.pop();`
+*   **Tip:** Monotonic Stack is used for "Next Greater Element" problems.
+    *   *Theory:* Maintain a stack of elements strictly increasing or decreasing.
+    *   *Code Pattern (Next Greater Element):*
+    ```java
+    Deque<Integer> stack = new ArrayDeque<>();
+    for(int i = 0; i < nums.length; i++) {
+        while(!stack.isEmpty() && nums[stack.peek()] < nums[i]) {
+            int idx = stack.pop();
+            ans[idx] = nums[i]; 
+        }
+        stack.push(i);
+    }
+    ```
+
+### Time & Space Complexity
+*   **Push (`push`):** O(1) Time
+*   **Pop (`pop`):** O(1) Time
+*   **Peek (`peek`):** O(1) Time
+*   **Search:** O(N) Time
+*   **Space Complexity:** O(N) to hold N elements.
+*   **Monotonic Stack Problems:** Although there is a nested `while` loop, every element is pushed and popped exactly once. Thus, the total time complexity is strictly O(N) for processing N elements.

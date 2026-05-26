@@ -1,3 +1,4 @@
+import java.util.List;
 class q3349 {
     public boolean hasIncreasingSubarrays(List<Integer> nums, int k) {
         int n=nums.size();

@@ -1,0 +1,5 @@
+# BFS (Breadth-First Search) Tips & Notes
+*   **Basics:** Exploring level by level in a Graph or Tree.
+*   **Java Specifics:** Achieved using a `Queue` (`LinkedList` or `ArrayDeque`).
+*   **Tip:** Guaranteed to find the shortest path in an unweighted graph.
+*   **Tip:** Don't forget `visited` sets for graphs to prevent infinite cycles.

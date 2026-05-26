@@ -1,0 +1,5 @@
+# Heap (Priority Queue) Tips & Notes
+*   **Basics:** Tree-based structure satisfying the heap property (Min or Max at root).
+*   **Java Specifics:** `PriorityQueue<Integer>` is Min-Heap.
+*   **Tip:** Max-Heap requires passing `Collections.reverseOrder()` or `(a, b) -> b - a`.
+*   **Tip:** Perfect for "Top K" or "Kth Largest" element problems.

@@ -1,0 +1,29 @@
+# Array Tips & Notes
+*   **Basics:** Contiguous memory allocation, indexing, traversal.
+*   **Java Specifics:** `int[] arr = new int[n]`. Length is accessed via `arr.length` (no parentheses).
+*   **Initialization Code:** `int[] arr = {1, 2, 3};` or `Arrays.fill(arr, -1);`
+*   **Sorting Code:** `Arrays.sort(arr);` (O(N log N) time).
+*   **Copying Arrays Code:** `int[] copy = Arrays.copyOf(arr, arr.length);`
+
+### Theoretical & Coding Tips
+*   **Tip:** Always check for edge cases like `if(arr == null || arr.length == 0) return 0;`.
+*   **Tip:** If the array is sorted, consider **Binary Search** or **Two Pointers**.
+*   **Two Pointers Code Pattern:** 
+    ```java
+    int left = 0, right = arr.length - 1;
+    while(left < right) { 
+        // logic 
+        left++; right--; 
+    }
+    ```
+*   **Tip:** For subarray sums, think of **Prefix Sums**.
+    *   *Theory:* `prefixSum[i]` stores the sum of elements from index `0` to `i`. Sum of subarray from `i` to `j` is `prefixSum[j] - prefixSum[i-1]`.
+*   **Tip:** If you need to find duplicates or missing numbers in an array of size `n` containing numbers from `1` to `n`, consider modifying the array in-place to achieve O(1) space.
+
+### Time & Space Complexity
+*   **Access by index:** O(1) Time
+*   **Search (Unsorted):** O(N) Time
+*   **Search (Sorted, Binary Search):** O(log N) Time
+*   **Insert/Delete at end:** O(1) Time
+*   **Insert/Delete in middle/beginning:** O(N) Time (due to shifting elements)
+*   **Space Complexity:** O(N) where N is the size of the array.

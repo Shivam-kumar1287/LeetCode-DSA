@@ -1,0 +1,4 @@
+# Tree Tips & Notes
+*   **Basics:** Hierarchical data structure, acyclic.
+*   **Tip:** Master traversals: Pre-order, In-order, Post-order, Level-order.
+*   **Tip:** Most tree problems can be solved recursively. Find the base case and define what info each sub-tree needs to return.

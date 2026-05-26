@@ -1,0 +1,20 @@
+# String Tips & Notes
+*   **Basics:** Sequences of characters. In Java, Strings are immutable.
+*   **Java Specifics:** `String.length()`, `s.charAt(i)`, `s.substring(start, end)`.
+
+### Theoretical & Coding Tips
+*   **Tip:** Use `StringBuilder` for multiple append operations.
+    *   *Code:* `StringBuilder sb = new StringBuilder(); sb.append('a'); String result = sb.toString();`
+*   **Tip:** String to char array is much faster for index manipulation.
+    *   *Code:* `char[] arr = s.toCharArray();`
+*   **Tip:** String comparison MUST use `.equals()`, not `==`.
+*   **Tip:** For anagrams or character frequency, use a fixed size array instead of a HashMap to save memory and time.
+    *   *Code:* `int[] count = new int[26]; count[s.charAt(i) - 'a']++;`
+*   **Tip:** To check if a character is alphanumeric: `Character.isLetterOrDigit(c)`.
+
+### Time & Space Complexity
+*   **Access by index (`charAt`):** O(1) Time
+*   **Substring creation:** O(N) Time (creates a new string in Java 7+)
+*   **Concatenation (`+` operator in a loop):** O(N^2) Time (creates new string every time).
+*   **Concatenation using `StringBuilder`:** O(1) amortized Time per append, O(N) overall.
+*   **Space Complexity:** O(N) for storing a string of length N.

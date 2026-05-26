@@ -1,0 +1,30 @@
+# Graph Tips & Notes
+*   **Basics:** Nodes (vertices) and edges.
+
+### Theoretical & Coding Tips
+*   **Tip:** Representing graphs in Java:
+    *   *Adjacency List (Preferred):* `List<List<Integer>> adj = new ArrayList<>();`
+*   **Tip:** To avoid infinite loops in cyclic graphs, use a visited set or array.
+*   **BFS on Graph Code Pattern (Shortest Path Unweighted):**
+    ```java
+    Queue<Integer> q = new LinkedList<>();
+    q.offer(startNode);
+    visited[startNode] = true;
+    while(!q.isEmpty()) {
+        int node = q.poll();
+        for(int neighbor : adj.get(node)) {
+            if(!visited[neighbor]) {
+                visited[neighbor] = true;
+                q.offer(neighbor);
+            }
+        }
+    }
+    ```
+*   **Tip:** For weighted shortest path, use Dijkstra's Algorithm with a `PriorityQueue`.
+
+### Time & Space Complexity (where V = Vertices, E = Edges)
+*   **DFS / BFS Traversal Time:** O(V + E) for an Adjacency List. O(V^2) for an Adjacency Matrix.
+*   **Space Complexity (Adjacency List storage):** O(V + E).
+*   **Space Complexity (Adjacency Matrix storage):** O(V^2).
+*   **Space Complexity (Visited Array & Recursion/Queue):** O(V).
+*   **Dijkstra's Algorithm Time:** O((V + E) log V) using a standard PriorityQueue.

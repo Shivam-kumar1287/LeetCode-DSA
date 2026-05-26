@@ -1,0 +1,5 @@
+# Bit Manipulation Tips & Notes
+*   **Basics:** Working directly with bits (AND, OR, XOR, shifts).
+*   **Java Specifics:** `&`, `|`, `^`, `<<`, `>>`, `>>>` (unsigned right shift), `Integer.bitCount()`.
+*   **Tip:** `n & (n - 1)` drops the lowest set bit (useful for checking powers of 2 or counting set bits).
+*   **Tip:** `a ^ a = 0` and `a ^ 0 = a`. Useful for finding a single missing or distinct number.

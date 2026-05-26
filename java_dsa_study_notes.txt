@@ -1,0 +1,54 @@
+# Java DSA Study Notes
+
+This note covers the basic concepts and data structures you need to study in Java for competitive programming and interviews.
+
+## 1. Arrays & Strings
+*   **Concepts:** Contiguous memory allocation, indexing, traversal.
+*   **Java specifics:** `int[] arr = new int[n]`, `String`, `StringBuilder` (for mutable strings), `String.toCharArray()`, `String.substring()`.
+*   **Algorithms:** Two Pointers, Sliding Window, Prefix Sum.
+
+## 2. Linked List
+*   **Concepts:** Nodes (data + pointer), Singly vs Doubly Linked Lists, Dummy nodes.
+*   **Java specifics:** Custom `ListNode` class.
+*   **Algorithms:** Slow/Fast pointers (Tortoise and Hare), Reversing, Merging.
+
+## 3. Stack & Queue
+*   **Concepts:** LIFO (Stack) and FIFO (Queue).
+*   **Java specifics:** 
+    *   Stack: `Stack<Integer>`, `Deque<Integer> stack = new ArrayDeque<>()` (recommended).
+    *   Queue: `Queue<Integer> q = new LinkedList<>()`.
+*   **Algorithms:** Monotonic Stack, BFS (uses Queue), DFS (uses Stack/Recursion).
+
+## 4. Hash Table (HashSet & HashMap)
+*   **Concepts:** Key-value pairs, fast lookups (O(1) average time complexity), handling collisions.
+*   **Java specifics:** `HashMap<Key, Value>`, `HashSet<Key>`, `.put()`, `.get()`, `.containsKey()`, `.getOrDefault()`.
+*   **Algorithms:** Frequency counting, finding duplicates, caching.
+
+## 5. Trees & Binary Search Trees (BST)
+*   **Concepts:** Root, leaves, height, depth, traversals (Inorder, Preorder, Postorder, Level Order).
+*   **Java specifics:** Custom `TreeNode` class.
+*   **Algorithms:** Recursion, BFS/DFS.
+
+## 6. Graph & BFS/DFS
+*   **Concepts:** Vertices, Edges, Directed vs Undirected, Weighted vs Unweighted.
+*   **Java specifics:** Adjacency List using `List<List<Integer>>` or `Map<Integer, List<Integer>>`.
+*   **Algorithms:** Topological Sort, Dijkstra's, Kruskal/Prim.
+
+## 7. Heap / Priority Queue
+*   **Concepts:** Min-Heap, Max-Heap, extracting min/max in O(log n).
+*   **Java specifics:** `PriorityQueue<Integer> pq = new PriorityQueue<>()` (Min-Heap default). Use `Collections.reverseOrder()` for Max-Heap.
+*   **Algorithms:** Top K elements, merging k sorted lists.
+
+## 8. Dynamic Programming (DP) & Backtracking
+*   **Concepts:** Overlapping subproblems, optimal substructure, recursion with memoization (Top-down) or tabulation (Bottom-up).
+*   **Java specifics:** 1D arrays `dp[]` or 2D arrays `dp[][]`.
+*   **Algorithms:** Knapsack, Longest Common Subsequence (LCS), generating permutations/combinations.
+
+## 9. Binary Search
+*   **Concepts:** Searching in a sorted search space in O(log n) time.
+*   **Java specifics:** `Arrays.binarySearch()`, custom implementation with `low`, `high`, `mid`.
+
+## 10. Bit Manipulation & Math
+*   **Concepts:** AND, OR, XOR, Left Shift, Right Shift.
+*   **Java specifics:** `&`, `|`, `^`, `<<`, `>>`, `Integer.bitCount()`.
+*   **Algorithms:** Counting set bits, finding missing numbers (XOR).

@@ -1,0 +1,5 @@
+# Matrix Tips & Notes
+*   **Basics:** 2D arrays / Grids.
+*   **Java Specifics:** `int[][] matrix = new int[rows][cols]`.
+*   **Tip:** Remember bounds checking: `r >= 0 && r < rows && c >= 0 && c < cols`.
+*   **Tip:** Direction arrays simplify neighbor visits: `int[] dr = {-1, 1, 0, 0}`, `int[] dc = {0, 0, -1, 1}`.

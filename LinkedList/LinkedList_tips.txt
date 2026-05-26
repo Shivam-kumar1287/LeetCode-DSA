@@ -1,0 +1,33 @@
+# LinkedList Tips & Notes
+*   **Basics:** Nodes pointing to subsequent nodes. Good for O(1) insertions/deletions if you have the pointer, but O(N) access time.
+
+### Theoretical & Coding Tips
+*   **Tip:** Always consider using a **Dummy Head** node to simplify edge cases.
+    *   *Code:* `ListNode dummy = new ListNode(0); dummy.next = head; ListNode curr = dummy;`
+*   **Tip:** The **Fast & Slow Pointer** (Tortoise and Hare) technique is standard for finding the middle or detecting cycles.
+    *   *Code:*
+    ```java
+    ListNode slow = head, fast = head;
+    while(fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    ```
+*   **Tip:** Reversing a linked list requires tracking 3 pointers.
+    *   *Code:*
+    ```java
+    ListNode prev = null, curr = head;
+    while(curr != null) {
+        ListNode nextTemp = curr.next; 
+        curr.next = prev;              
+        prev = curr;                   
+        curr = nextTemp;               
+    }
+    ```
+
+### Time & Space Complexity
+*   **Access by index:** O(N) Time
+*   **Search by value:** O(N) Time
+*   **Insertion/Deletion at Head:** O(1) Time
+*   **Insertion/Deletion in Middle (if node pointer is known):** O(1) Time
+*   **Space Complexity:** O(N) for N nodes. Pointers require extra memory compared to Arrays.

@@ -1,0 +1,4 @@
+# Sliding Window Tips & Notes
+*   **Basics:** A subset of Two Pointers to manage a continuous range of elements.
+*   **Tip:** Best for "longest/shortest subarray/substring with condition" problems.
+*   **Tip:** Use `right` to expand the window until a condition is met, use `left` to shrink the window until the condition is broken/fixed.

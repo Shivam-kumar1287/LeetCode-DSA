@@ -1,0 +1,17 @@
+# Queue Tips & Notes
+*   **Basics:** FIFO (First In First Out).
+
+### Theoretical & Coding Tips
+*   **Java Specifics:** `Queue` is an interface. You usually instantiate it with a `LinkedList` or `ArrayDeque`.
+    *   *Code:* `Queue<Integer> q = new LinkedList<>(); q.offer(val); int first = q.poll();`
+*   **Tip:** `offer` and `poll` are generally preferred over `add` and `remove` because they return `false`/`null` instead of throwing exceptions on failure.
+*   **Tip:** Deque (Double Ended Queue) allows insertion/deletion from both sides.
+    *   *Code:* `Deque<Integer> dq = new ArrayDeque<>(); dq.offerFirst(); dq.pollLast();`
+*   **Tip:** Often used for topological sort (Kahn's Algorithm).
+
+### Time & Space Complexity
+*   **Enqueue (`offer`, `add`):** O(1) Time
+*   **Dequeue (`poll`, `remove`):** O(1) Time
+*   **Peek (`peek`):** O(1) Time
+*   **Search:** O(N) Time
+*   **Space Complexity:** O(N) to hold N elements.

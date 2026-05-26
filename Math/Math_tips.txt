@@ -1,0 +1,6 @@
+# Math Tips & Notes
+*   **Basics:** Number theory, primes, modulo.
+*   **Java Specifics:** `Math.abs()`, `Math.pow()`, `Math.sqrt()`. Watch out for integer limits.
+*   **Tip:** Use `long` when doing large multiplications to prevent overflow.
+*   **Tip:** Prime checking only requires iterating up to `sqrt(n)`.
+*   **Tip:** `(A + B) % M = ((A % M) + (B % M)) % M`.

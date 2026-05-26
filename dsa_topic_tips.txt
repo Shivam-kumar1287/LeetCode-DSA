@@ -1,0 +1,80 @@
+# Topic-Wise Tips & Tricks for LeetCode
+
+(Covering all topics present in your directory except 'nalr')
+
+### 1. Array / Arraysrev / array3d / array4d
+*   **Tip:** Always check for edge cases like empty arrays `arr.length == 0`.
+*   **Tip:** If the array is sorted, consider **Binary Search** or **Two Pointers**.
+*   **Tip:** For subarray sums, think of **Prefix Sums** or a **HashMap** storing previous sums.
+
+### 2. String
+*   **Tip:** Strings in Java are immutable. Use `StringBuilder` when you are doing many concatenations.
+*   **Tip:** Often converted to a character array `char[] arr = s.toCharArray()` for easier manipulation.
+*   **Tip:** An array `int[] count = new int[26]` is a great lightweight substitute for a HashMap when dealing with lowercase English letters.
+
+### 3. HashTable
+*   **Tip:** Use `HashMap` for storing frequencies or indices of elements.
+*   **Tip:** Use `HashSet` when you only need to check for existence/duplicates.
+*   **Tip:** The method `map.getOrDefault(key, 0)` is very useful for frequency maps.
+
+### 4. LinkedList
+*   **Tip:** Always consider using a **Dummy Head** node `ListNode dummy = new ListNode(0)` to simplify edge cases (like deleting the head).
+*   **Tip:** The **Fast & Slow Pointer** technique is standard for finding the middle or detecting cycles.
+*   **Tip:** Keep track of the `prev` node when reversing a linked list.
+
+### 5. Stack
+*   **Tip:** Excellent for matching problems (e.g., valid parentheses).
+*   **Tip:** Think about **Monotonic Stack** when asked to find the "next greater/smaller element".
+*   **Tip:** You can use `Deque<Integer> stack = new ArrayDeque<>()` as it's faster than the legacy `Stack` class in Java.
+
+### 6. Queue & BFS
+*   **Tip:** Used primarily for Level-Order Traversal in Trees or shortest path in unweighted Graphs.
+*   **Tip:** Keep track of the queue size `int size = q.size()` at the start of a `while` loop if you need to process level by level.
+
+### 7. BinaryTree / Tree
+*   **Tip:** Recursion is your best friend. Always think about what the base case is (usually `if (root == null)`).
+*   **Tip:** Preorder, Inorder, and Postorder are DFS variants. Level-order is BFS.
+*   **Tip:** For BSTs (Binary Search Trees), an Inorder traversal yields elements in sorted order.
+
+### 8. BinarySearch
+*   **Tip:** Used not just for searching arrays, but finding answers in a monotonic search space (e.g., "minimum capacity to ship within D days").
+*   **Tip:** Prevent overflow by using `int mid = left + (right - left) / 2`.
+
+### 9. Backtracking
+*   **Tip:** The template is: `Choose -> Explore (Recurse) -> Unchoose (Backtrack)`.
+*   **Tip:** Use `new ArrayList<>(currentList)` when adding the current state to the result list, otherwise you'll add empty lists.
+*   **Tip:** Sorting the input array first helps easily skip duplicates in subsets/combinations.
+
+### 10. DP (Dynamic Programming)
+*   **Tip:** Start with a recursive approach (Top-Down) + Memoization before trying Tabulation (Bottom-Up).
+*   **Tip:** Key is defining the state variables correctly (e.g., `i` for index, `k` for remaining operations).
+*   **Tip:** If you only depend on the previous row/state, you can optimize space complexity to O(1) or O(N).
+
+### 11. Graph
+*   **Tip:** Adjacency List is usually preferred over Adjacency Matrix unless the graph is very dense.
+*   **Tip:** Always use a `boolean[] visited` or `HashSet` to avoid cycles and infinite loops.
+*   **Tip:** Use Union-Find (Disjoint Set) for connected components or cycle detection in undirected graphs.
+
+### 12. Heap
+*   **Tip:** Think Heap for "Top K", "Kth Largest/Smallest", or "Merge K Sorted...".
+*   **Tip:** In Java, a `PriorityQueue` is a Min-Heap by default. Use `Collections.reverseOrder()` for Max-Heap.
+
+### 13. Sliding Window
+*   **Tip:** Used for "longest/shortest substring/subarray" problems.
+*   **Tip:** Template involves a `left` pointer, a `right` pointer expanding the window, and a `while` loop shrinking `left` when a condition is violated.
+
+### 14. Bit Manipulation
+*   **Tip:** `n & (n - 1)` drops the lowest set bit (useful for checking powers of 2 or counting set bits).
+*   **Tip:** `XOR (^)` cancels out duplicate numbers (`a ^ a = 0`).
+
+### 15. Math
+*   **Tip:** Watch out for integer overflow; use `long` when multiplying large numbers.
+*   **Tip:** Prime checking only requires iterating up to `sqrt(n)`.
+*   **Tip:** Modulo arithmetic properties: `(A + B) % M = ((A % M) + (B % M)) % M`.
+
+### 16. Pattern
+*   **Tip:** Try breaking down the pattern into rows and columns, establishing a relationship between the row number and the characters/spaces printed.
+
+### 17. Matrix
+*   **Tip:** Remember directions arrays for 2D grids: `int[] dRow = {-1, 1, 0, 0};` and `int[] dCol = {0, 0, -1, 1};`.
+*   **Tip:** Check bounds before moving: `if (r >= 0 && r < rows && c >= 0 && c < cols)`.

@@ -1,0 +1,5 @@
+# Backtracking Tips & Notes
+*   **Basics:** Exploring all possibilities using recursion.
+*   **Template:** `Choose -> Explore (Recurse) -> Unchoose (Backtrack)`.
+*   **Java Specifics:** Use `new ArrayList<>(currentList)` when adding the current state to the result list, otherwise you'll add empty lists as Java passes object references.
+*   **Tip:** Sorting the input array first helps easily skip duplicates in subsets/combinations.

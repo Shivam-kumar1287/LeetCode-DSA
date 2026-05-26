@@ -1,0 +1,22 @@
+# Binary Search Tips & Notes
+*   **Basics:** Search in O(log n) time. Search space must be sorted or monotonic.
+
+### Theoretical & Coding Tips
+*   **Tip:** Always use `left + (right - left) / 2` to avoid integer overflow when calculating mid.
+*   **Classic Binary Search Code Pattern:**
+    ```java
+    int left = 0, right = arr.length - 1;
+    while(left <= right) {
+        int mid = left + (right - left) / 2;
+        if(arr[mid] == target) return mid;
+        else if(arr[mid] < target) left = mid + 1;
+        else right = mid - 1;
+    }
+    return -1;
+    ```
+*   **Tip:** For finding the "first occurrence" (lower bound), do not return immediately upon finding the target. Instead, shrink the right boundary.
+
+### Time & Space Complexity
+*   **Standard Binary Search Time:** O(log N) where N is the size of the search space. We halve the search space at each step.
+*   **Search Space on Answers Time:** O(N log(Max - Min)) where N is the time taken to evaluate the `isValid(mid)` function, and Max-Min is the range of answers.
+*   **Space Complexity:** O(1) if implemented iteratively. O(log N) if implemented recursively due to the call stack.

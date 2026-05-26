@@ -1,0 +1,4 @@
+# Pattern Tips & Notes
+*   **Basics:** Printing specific sequences of characters (like `*`).
+*   **Tip:** Find the relationship between the row number (`i`) and the columns (`j`).
+*   **Tip:** Often relies on nested loops, with the inner loop handling spaces and then characters.

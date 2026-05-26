@@ -1,0 +1,24 @@
+# HashTable Tips & Notes
+*   **Basics:** Key-value pairs, fast lookup time.
+*   **Java Specifics:** `HashMap<K, V>`, `HashSet<K>`.
+
+### Theoretical & Coding Tips
+*   **Tip:** Use `HashMap` for storing frequencies.
+    *   *Code:* `map.put(key, map.getOrDefault(key, 0) + 1);`
+*   **Tip:** Iterating through a HashMap:
+    *   *Code:* 
+    ```java
+    for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+        int key = entry.getKey();
+        int val = entry.getValue();
+    }
+    ```
+*   **Tip:** Use `HashSet` for distinct elements and fast lookups.
+    *   *Code:* `Set<Integer> set = new HashSet<>(Arrays.asList(1, 2, 3));`
+*   **Tip:** When using custom objects as keys in a Map or Set, you MUST override `equals()` and `hashCode()`.
+
+### Time & Space Complexity
+*   **Search/Lookup (`get`, `containsKey`):** O(1) Average Time, O(N) Worst Case (if many hash collisions).
+*   **Insertion (`put`, `add`):** O(1) Average Time, O(N) Worst Case.
+*   **Deletion (`remove`):** O(1) Average Time, O(N) Worst Case.
+*   **Space Complexity:** O(N) to store N elements. Space can dynamically grow based on the Load Factor (default 0.75 in Java).
