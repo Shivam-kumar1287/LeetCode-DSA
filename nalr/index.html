@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NALR Aptitude & Reasoning Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for Topics -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Aptitude & LR</h2>
+            </div>
+            <ul id="topic-list" class="topic-list">
+                <!-- JavaScript will populate topics here -->
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="glass-panel">
+                <div id="content-header" class="content-header">
+                    <h1 id="topic-title">Select a Topic</h1>
+                    <!-- Mode Selector Tab -->
+                    <div id="mode-selector" class="mode-selector hidden">
+                        <button id="btn-tips" class="mode-btn active">Tips & Shortcuts</button>
+                        <button id="btn-mcq" class="mode-btn">MCQ Practice</button>
+                    </div>
+                </div>
+
+                <!-- MCQ Difficulty Filters & Score -->
+                <div id="mcq-filter" class="mcq-filter hidden">
+                    <div class="difficulty-tabs">
+                        <button id="filter-easy" class="filter-btn active">Easy <span class="badge" id="badge-easy">0</span></button>
+                        <button id="filter-medium" class="filter-btn">Medium <span class="badge" id="badge-medium">0</span></button>
+                        <button id="filter-hard" class="filter-btn">Hard <span class="badge" id="badge-hard">0</span></button>
+                    </div>
+                    <div class="score-container">
+                        Score: <span id="score-val" class="score-badge">0</span> / <span id="total-val" class="score-total">0</span>
+                    </div>
+                </div>
+
+                <div id="content-body" class="content-body">
+                    <p class="placeholder-text">Click on any topic from the sidebar to view formulas, key tricks, and practice questions.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
