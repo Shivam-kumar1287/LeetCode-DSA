@@ -78,3 +78,9 @@
 ### 17. Matrix
 *   **Tip:** Remember directions arrays for 2D grids: `int[] dRow = {-1, 1, 0, 0};` and `int[] dCol = {0, 0, -1, 1};`.
 *   **Tip:** Check bounds before moving: `if (r >= 0 && r < rows && c >= 0 && c < cols)`.
+
+### 18. Sorting
+*   **Tip:** Java's `Arrays.sort()` uses Dual-Pivot Quicksort for primitives (O(n log n) average, O(n²) worst) and Timsort for objects (O(n log n) guaranteed, stable).
+*   **Tip:** If stability (preserving the relative order of duplicate elements) is required, use Merge Sort, Insertion Sort, or Java's built-in object sorting.
+*   **Tip:** Non-comparison sorts like **Counting Sort** or **Radix Sort** can sort in O(n) time when the range of values is small or bounded.
+*   **Tip:** Use **Quickselect** (the partitioning step of Quicksort) to find the k-th smallest/largest element in O(n) average time instead of sorting the whole array.

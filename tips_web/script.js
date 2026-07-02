@@ -2,6 +2,7 @@
 const TOPICS_CONFIG = {
     "Array": "Arrays & Sliding Window",
     "BinarySearch": "Binary Search",
+    "Sorting": "Sorting Algorithms",
     "String": "Strings & Advanced String Algorithms",
     "Backtracking": "Recursion & Backtracking",
     "OOPS": "OOPS",
