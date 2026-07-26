@@ -19,9 +19,24 @@ public class q3526 {
         }
         return ans;
     }
+    public int maxProduct1(int n) {
+        int m1=0,m2=0;
+        while(n>0){
+            int d=n%10;
+            if(d>m1 && d>m2){
+                m1=d;
+            }
+            if(d>m2 && d<m1){
+                m2=d;
+            }
+            n/=10;
+        }
+        return m1*m2;
+    }
     public static void main(String[] args) {
         q3526 ob=new q3526();
         int n=437;
         System.out.println(ob.maxProduct(n));
+        System.out.println(ob.maxProduct1(n));
     }   
 }
