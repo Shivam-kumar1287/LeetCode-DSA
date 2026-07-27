@@ -55,5 +55,30 @@ public class bfs1 {
         }
 
         bfs(graph);
+        dfs(graph);
     }
+    public ArrayList<Integer> dfs(ArrayList<ArrayList<Integer>> adj) {
+        // code here
+        int v=adj.size();
+        boolean[] vis=new boolean[v];
+        
+        ArrayList<Integer> list=new ArrayList<>();
+        dfs1(adj,list,vis,0);
+        return list;
+        
+        }
+        
+        public void dfs1(
+            ArrayList<ArrayList<Integer>> adj,
+            ArrayList<Integer> ans,boolean vis[],int i)
+        {
+            vis[i]=true;
+            ans.add(i);
+            System.out.println("i "+i+" ans "+ans);
+            for(int val:adj.get(i)){
+                if(!vis[val]){
+                    dfs1(adj,ans,vis,val);
+                }
+            }
+        }
 }
