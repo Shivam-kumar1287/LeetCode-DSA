@@ -25,7 +25,7 @@ class q3517 {
             t = String.valueOf(ch[ch.length - 1]);
         }
 
-        sb1.append(sb);
+          sb1.append(sb);
         sb1.reverse();
 
         return sb.toString() + t + sb1.toString();
