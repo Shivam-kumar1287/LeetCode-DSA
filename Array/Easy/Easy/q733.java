@@ -1,5 +1,4 @@
-package Array.Easy.Easy;
-
+import java.util.*;
 public class q733 {
   
     static int[][] dir = {{0,-1},{0,1},{-1,0},{1,0}};
