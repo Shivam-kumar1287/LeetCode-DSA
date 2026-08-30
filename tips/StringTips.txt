@@ -34,6 +34,48 @@ store like s = "A man, a plan, a canal: Panama" to    "amanaplanacanalpanama"
 
 🔹 3.
 
+1. Remove spaces from both ends → trim()
+String str = "  hello world  ";
+
+str = str.trim();
+
+char[] arr = str.toCharArray();
+
+Result:
+
+str = "hello world"
+arr = ['h','e','l','l','o',' ','w','o','r','l','d']
+2. Remove ALL spaces → replace()
+String str = "  hello world  ";
+
+str = str.replace(" ", "");
+
+char[] arr = str.toCharArray();
+
+Result:
+
+"helloworld"
+3. Remove ALL whitespace → replaceAll("\\s+", "")
+
+This is useful when you want to remove spaces, tabs, newlines, etc.
+
+String str = "  hello \t world \n";
+
+str = str.replaceAll("\\s+", "");
+
+char[] arr = str.toCharArray();
+
+Result:
+
+"helloworld"
+
+
+| Method                   | Removes                                |
+| ------------------------ | -------------------------------------- |
+| `trim()`                 | Leading/trailing spaces                |
+| `replace(" ", "")`       | Normal spaces everywhere               |
+| `replaceAll("\\s+", "")` | All whitespace: spaces, tabs, newlines |
+
 
 
 🔹 3.
