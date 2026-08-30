@@ -1,81 +1,954 @@
-🔥 Convert String to Char Array (Very Useful)
+# 🔥 STRING CHEAT SHEET — JAVA + PYTHON
+
+## 1. 🔥 Convert String → Char Array
+
+### Java
+
+```java
+String s = "hello";
+
 char[] arr = s.toCharArray();
+```
 
+### Result
 
-Reverse String (Java)
+```text
+s   = "hello"
+
+arr = ['h', 'e', 'l', 'l', 'o']
+```
+
+### Python
+
+```python
+s = "hello"
+
+arr = list(s)
+```
+
+### Result
+
+```text
+arr = ['h', 'e', 'l', 'l', 'o']
+```
+
+---
+
+# 2. 🔥 Reverse String
+
+### Java
+
+```java
+String s = "hello";
+
 String reversed = new StringBuilder(s).reverse().toString();
+```
 
-int Python
-s[::-1]
+### Result
 
+```text
+s        = "hello"
+reversed = "olleh"
+```
 
-🔹 3. Frequency Array Trick (Very Fast)
-Java
+### Python
+
+```python
+s = "hello"
+
+reversed_s = s[::-1]
+```
+
+### Result
+
+```text
+"hello" → "olleh"
+```
+
+---
+
+# 3. 🔥 Frequency Array Trick — Very Fast
+
+Useful when characters are only lowercase `a-z`.
+
+## Java
+
+```java
+String s = "banana";
+
 int[] freq = new int[26];
-freq[s.charAt(i) - 'a']++;  freq will + for particular ith character
-freq[s.charAt(i)-'a']--;    freq will - for particular ith character
 
+for (int i = 0; i < s.length(); i++) {
+    freq[s.charAt(i) - 'a']++;
+}
+```
 
+### How it works
 
-Python
-freq = [0]*26
-freq[ord(s[i]) - ord('a')] += 1
+```text
+'a' - 'a' = 0
+'b' - 'a' = 1
+'c' - 'a' = 2
+...
+'z' - 'a' = 25
+```
 
+For:
 
-🔹 4 .Method 2: Using Regex (Shorter Way)
+```text
+s = "banana"
+```
+
+Frequency:
+
+```text
+a → 3
+b → 1
+n → 2
+```
+
+So:
+
+```text
+freq[0] = 3   // a
+freq[1] = 1   // b
+freq[13] = 2  // n
+```
+
+### Increase / Decrease
+
+```java
+freq[s.charAt(i) - 'a']++;
+```
+
+Means:
+
+```text
+frequency + 1
+```
+
+And:
+
+```java
+freq[s.charAt(i) - 'a']--;
+```
+
+Means:
+
+```text
+frequency - 1
+```
+
+### Python
+
+```python
+s = "banana"
+
+freq = [0] * 26
+
+for i in range(len(s)):
+    freq[ord(s[i]) - ord('a')] += 1
+```
+
+### Result
+
+```text
+a → 3
+b → 1
+n → 2
+```
+
+---
+
+# 4. 🔥 Keep Only Letters
+
+## Java — Regex
+
+```java
+String s = "A man, a plan, a canal: Panama";
+
 String result = s.replaceAll("[^a-zA-Z]", "");
+```
 
-store like s = "A man, a plan, a canal: Panama" to    "amanaplanacanalpanama"
- 
- In Python 
- def keep_only_letters(s):
-    return "".join(ch for ch in s if ch.isalpha())
+### Result
 
+```text
+Original:
+"A man, a plan, a canal: Panama"
 
-🔹 3.
+Result:
+"AmanaplanacanalPanama"
+```
 
-1. Remove spaces from both ends → trim()
+If you also want lowercase:
+
+```java
+String result = s.replaceAll("[^a-zA-Z]", "").toLowerCase();
+```
+
+### Result
+
+```text
+"amanaplanacanalpanama"
+```
+
+## Python
+
+```python
+s = "A man, a plan, a canal: Panama"
+
+result = "".join(ch for ch in s if ch.isalpha())
+```
+
+### Result
+
+```text
+"AmanaplanacanalPanama"
+```
+
+For lowercase:
+
+```python
+result = "".join(ch for ch in s if ch.isalpha()).lower()
+```
+
+### Result
+
+```text
+"amanaplanacanalpanama"
+```
+
+---
+
+# 5. 🔥 Remove Spaces
+
+## 5.1 Remove spaces from both ends → `trim()`
+
+### Java
+
+```java
 String str = "  hello world  ";
 
 str = str.trim();
 
 char[] arr = str.toCharArray();
+```
 
-Result:
+### Result
 
+```text
 str = "hello world"
+
 arr = ['h','e','l','l','o',' ','w','o','r','l','d']
-2. Remove ALL spaces → replace()
+```
+
+⚠️ `trim()` removes spaces from the **beginning and end**, not spaces in the middle.
+
+---
+
+# 5.2 Remove ALL normal spaces → `replace()`
+
+```java
 String str = "  hello world  ";
 
 str = str.replace(" ", "");
 
 char[] arr = str.toCharArray();
+```
 
-Result:
+### Result
+
+```text
+"  hello world  "
+
+        ↓
 
 "helloworld"
-3. Remove ALL whitespace → replaceAll("\\s+", "")
+```
 
-This is useful when you want to remove spaces, tabs, newlines, etc.
+---
 
+# 5.3 Remove ALL whitespace → `replaceAll()`
+
+Useful for:
+
+```text
+space
+tab
+newline
+```
+
+### Java
+
+```java
 String str = "  hello \t world \n";
 
 str = str.replaceAll("\\s+", "");
 
 char[] arr = str.toCharArray();
+```
 
-Result:
+### Result
+
+```text
+"  hello \t world \n"
+
+        ↓
 
 "helloworld"
+```
 
+### Quick Difference
 
-| Method                   | Removes                                |
-| ------------------------ | -------------------------------------- |
-| `trim()`                 | Leading/trailing spaces                |
-| `replace(" ", "")`       | Normal spaces everywhere               |
-| `replaceAll("\\s+", "")` | All whitespace: spaces, tabs, newlines |
+| Method                   | What it does                      |
+| ------------------------ | --------------------------------- |
+| `trim()`                 | Removes spaces from beginning/end |
+| `replace(" ", "")`       | Removes normal spaces everywhere  |
+| `replaceAll("\\s+", "")` | Removes all whitespace            |
 
+---
 
+# 6. 🔥 Java `split()` Cheat Sheet
 
-🔹 3.
+`split()` converts:
+
+```text
+String → String[]
+```
+
+---
+
+## 6.1 Split by single space
+
+```java
+String str = "hello world java";
+
+String[] arr = str.split(" ");
+```
+
+### Result
+
+```text
+["hello", "world", "java"]
+```
+
+---
+
+## 6.2 Split by multiple spaces ⭐
+
+```java
+String str = "hello    world   java";
+
+String[] arr = str.trim().split("\\s+");
+```
+
+### Result
+
+```text
+["hello", "world", "java"]
+```
+
+⭐ Very useful for coding questions involving sentences.
+
+---
+
+## 6.3 Split by comma
+
+```java
+String str = "apple,banana,mango";
+
+String[] arr = str.split(",");
+```
+
+### Result
+
+```text
+["apple", "banana", "mango"]
+```
+
+---
+
+## 6.4 Split by comma + optional spaces
+
+```java
+String str = "apple, banana,  mango";
+
+String[] arr = str.split("\\s*,\\s*");
+```
+
+### Result
+
+```text
+["apple", "banana", "mango"]
+```
+
+---
+
+## 6.5 Split by dot ⚠️
+
+`.` has a special meaning in Regex.
+
+❌ Don't use:
+
+```java
+str.split(".");
+```
+
+✅ Use:
+
+```java
+String str = "hello.world.java";
+
+String[] arr = str.split("\\.");
+```
+
+### Result
+
+```text
+["hello", "world", "java"]
+```
+
+---
+
+## 6.6 Split by pipe `|` ⚠️
+
+`|` is also special in Regex.
+
+```java
+String str = "java|python|cpp";
+
+String[] arr = str.split("\\|");
+```
+
+### Result
+
+```text
+["java", "python", "cpp"]
+```
+
+---
+
+## 6.7 Split by hyphen
+
+```java
+String str = "10-20-30";
+
+String[] arr = str.split("-");
+```
+
+### Result
+
+```text
+["10", "20", "30"]
+```
+
+---
+
+## 6.8 Split by slash
+
+```java
+String str = "10/20/30";
+
+String[] arr = str.split("/");
+```
+
+### Result
+
+```text
+["10", "20", "30"]
+```
+
+---
+
+# 7. 🔥 Split by Numbers
+
+```java
+String str = "abc123xyz456";
+
+String[] arr = str.split("\\d+");
+```
+
+### Result
+
+```text
+["abc", "xyz"]
+```
+
+### Meaning
+
+```text
+\\d+ → one or more digits
+```
+
+---
+
+# 8. 🔥 Split by Non-Numbers
+
+```java
+String str = "123abc456xyz789";
+
+String[] arr = str.split("\\D+");
+```
+
+### Result
+
+```text
+["123", "456", "789"]
+```
+
+### Meaning
+
+```text
+\\D+ → one or more non-digits
+```
+
+---
+
+# 9. 🔥 Split by Letters
+
+```java
+String str = "123abc456xyz789";
+
+String[] arr = str.split("[a-zA-Z]+");
+```
+
+### Result
+
+```text
+["123", "456", "789"]
+```
+
+---
+
+# 10. 🔥 Split by Whitespace
+
+```java
+String str = "hello  world\tjava\ncpp";
+
+String[] arr = str.split("\\s+");
+```
+
+### Result
+
+```text
+["hello", "world", "java", "cpp"]
+```
+
+`\\s+` handles:
+
+```text
+space
+tab
+newline
+```
+
+---
+
+# 11. 🔥 Split by Non-Word Characters
+
+```java
+String str = "hello@world#java";
+
+String[] arr = str.split("\\W+");
+```
+
+### Result
+
+```text
+["hello", "world", "java"]
+```
+
+---
+
+# 12. 🔥 Split Using Multiple Delimiters
+
+```java
+String str = "apple,banana;orange|mango";
+
+String[] arr = str.split("[,;|]");
+```
+
+### Result
+
+```text
+["apple", "banana", "orange", "mango"]
+```
+
+---
+
+# 13. 🔥 Split by Comma OR Space
+
+```java
+String str = "apple banana,orange mango";
+
+String[] arr = str.split("[,\\s]+");
+```
+
+### Result
+
+```text
+["apple", "banana", "orange", "mango"]
+```
+
+---
+
+# 14. 🔥 Split Sentence into Words
+
+⭐ Very useful for LeetCode.
+
+```java
+String str = "  I   love   Java  ";
+
+String[] words = str.trim().split("\\s+");
+```
+
+### Result
+
+```text
+["I", "love", "Java"]
+```
+
+---
+
+# 15. 🔥 String → Character Array
+
+This is NOT `split()`.
+
+```java
+String str = "hello";
+
+char[] arr = str.toCharArray();
+```
+
+### Result
+
+```text
+['h', 'e', 'l', 'l', 'o']
+```
+
+---
+
+# 16. 🔥 Split into Individual Characters
+
+```java
+String str = "hello";
+
+String[] arr = str.split("");
+```
+
+### Result
+
+```text
+["h", "e", "l", "l", "o"]
+```
+
+But if you need `char[]`, prefer:
+
+```java
+char[] arr = str.toCharArray();
+```
+
+---
+
+# 17. 🔥 Remove All Numbers
+
+### Java
+
+```java
+String str = "abc123xyz456";
+
+str = str.replaceAll("\\d+", "");
+```
+
+### Result
+
+```text
+"abc123xyz456"
+
+        ↓
+
+"abcxyz"
+```
+
+---
+
+# 18. 🔥 Remove Everything Except Numbers
+
+```java
+String str = "abc123xyz456";
+
+str = str.replaceAll("\\D+", "");
+```
+
+### Result
+
+```text
+"abc123xyz456"
+
+        ↓
+
+"123456"
+```
+
+---
+
+# 19. 🔥 Replace a Character
+
+```java
+String str = "hello";
+
+str = str.replace('l', 'x');
+```
+
+### Result
+
+```text
+"hello" → "hexxo"
+```
+
+---
+
+# 20. 🔥 Replace a String
+
+```java
+String str = "hello world";
+
+str = str.replace("world", "java");
+```
+
+### Result
+
+```text
+"hello world" → "hello java"
+```
+
+---
+
+# 21. 🔥 Regex Quick Revision
+
+```text
+" "           → single space
+
+"\\s+"        → one or more whitespace
+
+","           → comma
+
+"\\."         → dot
+
+"\\|"         → pipe |
+
+"-"           → hyphen
+
+"/"           → slash
+
+"\\d+"        → one or more digits
+
+"\\D+"        → one or more non-digits
+
+"[a-zA-Z]+"   → one or more letters
+
+"\\W+"        → one or more non-word characters
+
+"[,;|]"       → comma OR semicolon OR pipe
+
+"[,\\s]+"     → comma OR whitespace
+```
+
+---
+
+# 22. 🔥 MOST IMPORTANT COMMANDS
+
+## String → char[]
+
+```java
+char[] arr = str.toCharArray();
+```
+
+### Example
+
+```text
+"hello" → ['h','e','l','l','o']
+```
+
+---
+
+## String → String[]
+
+```java
+String[] arr = str.split("\\s+");
+```
+
+### Example
+
+```text
+"hello world" → ["hello", "world"]
+```
+
+---
+
+## Reverse String
+
+```java
+String rev = new StringBuilder(str).reverse().toString();
+```
+
+### Example
+
+```text
+"hello" → "olleh"
+```
+
+---
+
+## Remove edge spaces
+
+```java
+str.trim();
+```
+
+### Example
+
+```text
+"  hello  " → "hello"
+```
+
+---
+
+## Remove normal spaces
+
+```java
+str.replace(" ", "");
+```
+
+### Example
+
+```text
+"hello world" → "helloworld"
+```
+
+---
+
+## Remove all whitespace
+
+```java
+str.replaceAll("\\s+", "");
+```
+
+### Example
+
+```text
+"hello \t world" → "helloworld"
+```
+
+---
+
+## Remove numbers
+
+```java
+str.replaceAll("\\d+", "");
+```
+
+### Example
+
+```text
+"abc123xyz" → "abcxyz"
+```
+
+---
+
+## Keep only numbers
+
+```java
+str.replaceAll("\\D+", "");
+```
+
+### Example
+
+```text
+"abc123xyz456" → "123456"
+```
+
+---
+
+## Keep only letters
+
+```java
+str.replaceAll("[^a-zA-Z]", "");
+```
+
+### Example
+
+```text
+"A man, a plan!" → "Amanaplan"
+```
+
+---
+
+# 🚀 FINAL QUICK REVISION
+
+```java
+// String → char[]
+char[] arr = str.toCharArray();
+
+// String → String[]
+String[] arr = str.split("\\s+");
+
+// Reverse
+String rev = new StringBuilder(str).reverse().toString();
+
+// Remove edge spaces
+str.trim();
+
+// Remove spaces
+str.replace(" ", "");
+
+// Remove all whitespace
+str.replaceAll("\\s+", "");
+
+// Remove numbers
+str.replaceAll("\\d+", "");
+
+// Keep only numbers
+str.replaceAll("\\D+", "");
+
+// Keep only letters
+str.replaceAll("[^a-zA-Z]", "");
+
+// Replace character
+str.replace('a', 'b');
+
+// Replace String
+str.replace("old", "new");
+
+// Split by comma
+str.split(",");
+
+// Split by dot
+str.split("\\.");
+
+// Split by pipe
+str.split("\\|");
+
+// Split by numbers
+str.split("\\d+");
+
+// Split by non-numbers
+str.split("\\D+");
+
+// Split by whitespace
+str.split("\\s+");
+```
+
+## 🧠 5 Things You Should Memorize First
+
+```text
+1. toCharArray()       → String → char[]
+
+2. split("\\s+")       → String → words
+
+3. replace(" ", "")    → remove spaces
+
+4. replaceAll("\\d+")  → remove numbers
+
+5. replaceAll("\\D+")  → keep only numbers
+```
