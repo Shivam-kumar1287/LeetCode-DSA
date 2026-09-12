@@ -28,6 +28,14 @@ num = int(string, 2)
 print(num)
 
 
+// Binary → Integer
+sum = (sum << 1) | bit;
+// Integer → Binary
+bit = n & 1;
+n = n >> 1;
+
+
+
 in java
  String str = sb.toString();
 int ans = Integer.parseInt(str, 2);
