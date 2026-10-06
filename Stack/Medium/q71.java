@@ -12,7 +12,7 @@ class q71 {
                 continue;
             } else if (part.equals("..")) {
                 if (!stack.isEmpty()) {
-                    stack.pop();
+                       stack.pop();
                 }
             } else {
                 stack.push(part);
