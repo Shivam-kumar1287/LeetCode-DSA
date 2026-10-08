@@ -13,7 +13,7 @@ class q9171 {
             }
             else{
                 st.push(ch);
-            }
+             }
             }
         }
         return st.size();

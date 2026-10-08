@@ -1,8 +1,10 @@
 //create a queue using  stacks
+import java.util.*;
 class b3{
     
     Stack<Integer> s1;
-    Stack<Integer> s2;
+    
+    <Integer> s2;
     b3(){
         s1=new Stack<>();
         s2=new Stack<>();
